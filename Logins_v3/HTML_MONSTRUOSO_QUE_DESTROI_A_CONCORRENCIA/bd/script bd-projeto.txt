@@ -1,0 +1,24 @@
+create database bd_projeto;
+
+use bd_projeto;
+
+create table tb_usuario(
+  id_usuario int not null primary key auto_increment,
+  nome_usuario varchar (45) not null,
+  email_usuario varchar(25) not null unique,
+  senha_usuario varchar(10) not null, 
+  tipo_usuario int not null
+
+);
+/* tipo de usuario
+  1- usuario administrador 
+  0- usuario comum
+*/
+
+INSERT INTO tb_usuario(Nome_usuario, Email_usuario, Senha_usuario, Tipo_usuario)
+VALUES ('Daniel David','daniel_p.david@outlook.com', '123456', '1'),
+		('Fabiano Lopes', 'fabitous@gmail.com', '654321', '0');
+
+
+
+
