@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>E-campanhado tela inicial</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="../css/carousel.css" rel="stylesheet">
+</head>
+<style>
+      
+  .material-icons {
+    font-family: 'Material Icons Round';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5rem;
+    /*! line-height: 1; */
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -moz-font-feature-settings: 'liga';
+    -moz-osx-font-smoothing: grayscale;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    z-index: 1;
+    transition:  ease all .4s;
+  
+  }
+  
+  .material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+  
+  body, html {
+    margin: unset;
+    padding: unset;
+  }
+  body {
+    height: fit-content;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: #071922;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    z-index: 9999;
+    
+  }
+  header nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    backdrop-filter: blur(90px);
+	background-color: #07192270;
+
+  }
+  header nav a {
+    color: white;
+    text-decoration: none;
+  }
+  header nav .links {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  header nav .links a {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: .5rem;
+  }
+  section#carousel {
+    width: 100%;
+    height: 30rem;
+    margin-top: 4rem; 
+    box-sizing: border-box;
+  }
+  section#carousel .carousel {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  section#carousel .carousel .carousel-cell {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  section#carousel .carousel .carousel-cell:nth-child(1) {
+    height: 100%;
+    background-image: url("../imagens/tela1.png");
+  }
+  section#carousel .carousel .carousel-cell:nth-child(2) {
+    height: 100%;
+    background-image: url("../imagens/tela1.png");
+  }
+  section#carousel .carousel .carousel-cell:nth-child(3) {
+    height: 100%;
+    background-image: url("../imagens/tela1.png");
+  }
+
+  section#features {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 4rem 0rem;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+    gap: 1rem ;
+    /* padding-bottom: 2rem;
+    border-bottom: .1rem solid rgba(0, 0, 0, 0.1); */
+  }
+  section#features .feature {
+    color: rgb(216, 216, 216);
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    width: fit-content;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+  section#features .feature a {
+    padding: 0rem 1rem;
+    height: 2rem;
+    width: fit-content;
+    background-color: rgb(53, 141, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    border-radius: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: all cubic-bezier(0, 0.78, 0.14, 1.1) 0.5s;
+  }
+  section#features .feature a:hover {
+    background-color: rgb(18, 99, 206);
+  }
+  section#features .feature a:hover > span {
+    animation: arrow ease 1s;
+  }
+  @keyframes arrow {
+  0%   {transform: translateX(0rem);}
+  20%  {transform: translateX(.5rem);}
+  60%  {transform: translateX(0rem);}
+  80% {transform: translateX(.5rem);}
+  100% {transform: translateX(0rem);}
+  }
+
+
+  section#features .feature a span {
+    font-size: 1.25rem;
+    margin-left: .5rem;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 15
+  }
+  section#features .feature .img {
+    height: 8rem;
+    width: 8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  section#features .feature .img:nth-child(1) {
+    background-image: url('https://f.feridinha.com/Y2d0X.jpg');
+  }
+  section#features .feature .img:nth-child(2) {
+    background-image: url('//via.placeholder.com/350x150');
+  }
+  section#features .feature .img:nth-child(3) {
+    background-image: url('//via.placeholder.com/350x150');
+  }
+  section#features .feature h2 {
+    font-size: 1.5;
+    margin: unset;
+  }
+  section#features .feature p {
+    margin: unset;
+  }
+  section#cases {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  }
+  section#cases .case {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 6rem;
+  }
+  section#cases .case:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  section#cases .case .text {
+    width: fit-content;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 40rem;
+  }
+  section#cases .case .text p a {
+    padding: 0rem .35rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: .35rem;
+    text-decoration: none;
+    color: white;
+    transition: all cubic-bezier(0, 0.78, 0.14, 1.1) 0.5s;
+  }
+  section#cases .case .text p a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  section#cases .case img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  footer {
+    width: 100%;
+    height: fit-content;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+  footer .links {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    align-items: center;
+    height: fit-content;
+  }
+  footer .links a {
+    padding: 0rem 1rem;
+    height: 2rem;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    border-radius: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 1.1rem;
+    overflow: hidden;
+  }
+  footer .links a span {
+    font-size: 1.25rem;
+    margin-left: .5rem;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 15
+  }
+</style>
+<body>
+    
+<header>
+  <nav>
+	  
+    <a href="/">E-campanhado</a>
+    <div class="links">
+    <a data-tilt data-tilt-max="2" data-tilt-speed="3000" data-tilt-scale="1.05" data-tilt-glare="false" href="login.html">Login</a>
+	<a data-tilt data-tilt-max="2" data-tilt-speed="3000" data-tilt-scale="1.05" data-tilt-glare="false" href="cadastro.html">Cadastro</a>
+    </div>
+	  
+  </nav>
+</header>
+	
+  <section id="carousel">
+    <div class="carousel"
+    data-flickity='{ 
+      "wrapAround": true  
+    }'>
+    <div class="carousel-cell">
+    </div>
+    <div class="carousel-cell">
+    </div>
+    <div class="carousel-cell">
+    </div>
+  </div>
+  </section>
+  <section id="features">
+    <div class="feature" data-tilt data-tilt-max="10" data-tilt-speed="3000" data-tilt-scale="1.1" data-tilt-glare="true" data-tilt-max-glare="0.4">
+      <div class="img"></div>
+      <h2>Esse é um título</h2>
+      <p>Vai estar escrito uns textinhos.</p>
+      <a href="#">Crie<span class="material-symbols-rounded">arrow_forward</span></a>
+    </div>
+    <div class="feature" data-tilt data-tilt-max="10" data-tilt-speed="3000" data-tilt-scale="1.1" data-tilt-glare="true" data-tilt-max-glare="0.4">
+      <div class="img"></div>
+      <h2>Esse é um título</h2>
+      <p>Vai estar escrito uns textinhos.</p>
+      <a href="#">Crie<span class="material-symbols-rounded">arrow_forward</span></a>
+    </div>
+    <div class="feature" data-tilt data-tilt-max="10" data-tilt-speed="3000" data-tilt-scale="1.1" data-tilt-glare="true" data-tilt-max-glare="0.4">
+      <div class="img"></div>
+      <h2>Esse é um título</h2>
+      <p>Vai estar escrito uns textinhos.</p>
+      <a href="#">Crie<span class="material-symbols-rounded">arrow_forward</span></a>
+    </div>
+  </section>
+  <section id="cases">
+    <div class="case">
+      <div class="text">
+        <h1>Podemos falar do Opera RPG aqui.</h1>
+        <p>Vai ser bom para todos <a href="#">terem</a> uma base do nosso projeto, mas medo de tirarem nota. anyway outra imagem.</p>
+      </div>
+      <img src="../imagens/opera.png" data-tilt data-tilt-max="10" data-tilt-speed="3000" data-tilt-scale="1.1" data-tilt-glare="true">
+    </div>
+    <div class="case">
+      <div class="text">
+        <h1>Podemos falar do Opera RPG aqui.</h1>
+        <p>Vai ser bom para todos <a href="#">terem</a> uma base do nosso projeto, mas medo de tirarem nota. anyway outra imagem.</p>
+      </div>
+      <img src="../imagens/opera.png" data-tilt data-tilt-max="10" data-tilt-speed="3000" data-tilt-scale="1.1" data-tilt-glare="true">
+    </div>
+    <div class="case">
+      <div class="text">
+        <h1>Podemos falar do Opera RPG aqui.</h1>
+        <p>Vai ser bom para todos <a href="#">terem</a> uma base do nosso projeto, mas medo de tirarem nota. anyway outra imagem.</p>
+      </div>
+      <img src="../imagens/opera.png" data-tilt data-tilt-max="10" data-tilt-speed="3000" data-tilt-scale="1.1" data-tilt-glare="true">
+    </div>
+  </section>
+  <footer unselectable="on">
+    <p>&copy; 2022 E-campanhado LTDA.</p>
+    <div class="links">
+      <a data-tilt data-tilt-max="2" data-tilt-speed="3000" data-tilt-scale="1.05" data-tilt-glare="true" data-tilt-max-glare="0.4" href="index.html">Voltar ao inicio<span class="material-symbols-rounded">home</span></a>
+      <a data-tilt data-tilt-max="2" data-tilt-speed="3000" data-tilt-scale="1.05" data-tilt-glare="true" data-tilt-max-glare="0.4" href="termo.html">Privacidade<span class="material-symbols-rounded">open_in_new</span></a>
+      <a data-tilt data-tilt-max="2" data-tilt-speed="3000" data-tilt-scale="1.05" data-tilt-glare="true" data-tilt-max-glare="0.4" href="privacy.html">Termos<span class="material-symbols-rounded">open_in_new</span></a>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script type="text/javascript" src="../js/vanilla-tilt.js"></script>
+  </body>
+</html>
