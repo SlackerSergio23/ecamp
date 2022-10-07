@@ -1,2 +1,2 @@
-# ecamp
-TCC desenvolvido com o objetivo de ser aplicado mesas de rpg, facilitando criação e uso de fichas.
+# E-Campanhado
+Projeto desenvolvido com o objetivo de auxiliar na organização e execução de seçoes de RPG, disponibilizando ferramentas que facilitam a criação e o uso de fichas.
